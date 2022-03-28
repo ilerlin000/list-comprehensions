@@ -46,6 +46,8 @@ print(newlist)
 
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
+length = [len(i) for i in words if i != "the"]
+print(length)
 
 
 ## Given dictionary is consisted of vehicles and their weights in kilograms.
@@ -63,9 +65,14 @@ dict = {
     "Motorcycle": 110,
 }
 
+vehicles = [i.lower() for i in dict if dict[i] < 5000]
+print(vehicles)
+
 
 ## Find all the numbers from 1 to 1000 that have a 4 in them
 
+fours = [i for i in range(1001) if str(4) in str(i)]
+print(fours)
 
 ## count how many times the word 'the' appears in the text file - 'sometext.txt'
 
